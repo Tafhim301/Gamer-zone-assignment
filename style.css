@@ -8,7 +8,10 @@
     color: #FF42A5;
 
 
+
 }
+
+    
 
 /* Navbar Styles */
 nav{
@@ -48,8 +51,8 @@ nav ul{
 .follow-us{
     background: rgba(11, 2, 35, 0.10);
     border-radius: 8px;
-    text-align: center;
-    padding: 15px;
+    text-align:center;
+    padding: 1rem;
     height: 2rem;
     width:5rem ;
 }
@@ -83,6 +86,12 @@ nav ul{
     width: 30rem;
     
 }
+.banner-description{
+    color: #534C64;
+    font-size: 1.25rem;
+    font-weight: 500;
+   
+}
 .btn-primary{
     border-radius: 43px;
     height: 35px;
@@ -100,15 +109,69 @@ nav ul{
     border: none;
 
 }
+/* ---funny-videos-style--- */
+.funny-videos{
+    padding: 1rem 10rem;
+}
+.funny-videos-content{
+    text-align: center;
+}
+.funny-videos-title{
+    color: #0B0223;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+
+
+}
+.funny-videos-description{
+    color: #534C64;
+    text-align: center;
+    font-size: 0.75rem;
+    font-weight: 400;
+
+}
+.img-container{
+    display: flex;
+    justify-content: space-around;
+    
+    
+}
+.img-container.card p{
+    color: #534C64;
+    font-size: 1.25rem;
+    font-weight: 500;
+    
+    
+}
+.card img{
+    height: 15rem;
+    
+    
+}
+.img-container img:hover{
+    border: 4px #FF42A5 solid;
+    border-radius: 1rem;
+    
+    
+    
+    
+}
 
 /* ---Responsive layout--- */
 
 @media  screen and (max-width:576px) {
+    header{
+        padding: 0 2rem;
+        
+    }
     nav{
         flex-direction: column;
         height: min-content;
-        width: 60%;
+        width: 70%;
         box-shadow: none;
+
+        
     
         
         
@@ -144,5 +207,14 @@ nav ul{
         text-align: center;
 
 
+    }
+    /* ---Funny Videos Responsive */
+    .funny-videos{
+        padding: 0;
+        text-align: center;
+        width: 120%;
+    }
+    .img-container{
+        flex-direction: column;
     }
 }
