@@ -60,8 +60,8 @@ nav ul{
 /* ---Banner Styles--- */
 .banner{
     display: flex;
-    justify-content: space-between;
-    padding: 1rem 10rem;
+    justify-content: space-evenly;
+    
 }
 .banner-title{
     color: #0B0223;
@@ -112,6 +112,7 @@ nav ul{
 /* ---funny-videos-style--- */
 .funny-videos{
     padding: 1rem 10rem;
+    margin-top: 6rem;
 }
 .funny-videos-content{
     text-align: center;
@@ -134,32 +135,75 @@ nav ul{
 .img-container{
     display: flex;
     justify-content: space-around;
+    margin-top: 3rem;
     
     
 }
-.img-container.card p{
-    color: #534C64;
-    font-size: 1.25rem;
-    font-weight: 500;
+
+
     
     
+
+
+/* ----Card hover style ----- */
+.img-container {
+    text-align: center;
 }
-.card img{
-    height: 15rem;
-    
-    
-}
-.img-container img:hover{
-    border: 4px #FF42A5 solid;
+
+.card {
+    position: relative;
+    width: 300px; /* Adjust the width as needed */
+    overflow: hidden;
+    background-color: #f0f0f0; /* Set the background color */
+    border: none;
+    margin: 10px; 
     border-radius: 1rem;
-    background-color: #0B0223;
-    opacity: 0.7;
-    
-    
-    
-    
-    
 }
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.hover-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .hover-content {
+    opacity: 1;
+}
+
+.video-icon {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.watch-now {
+    color: white;
+    font-size: 18px;
+}
+
+.card p {
+    padding: 10px;
+    text-align: center;
+}
+
+    
+    
+
 
 /* ---Play-instantly--- */
 .play-instantly{
@@ -262,10 +306,7 @@ footer{
 /* ---Responsive layout--- */
 
 @media screen and (max-width:576px){
-    header{
-        padding: 0 2rem;
-        
-    }
+   
 
     nav{
         flex-direction: column;
@@ -289,9 +330,110 @@ footer{
     }
     .banner{
         flex-direction: column-reverse;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 0.25rem;
+        margin-left: 20%;
+        
+        
+
+        
+    }
+    .banner-image img{
+        margin-left: 0;
+        height: 100%;
+        margin-bottom:1rem ;
+    }
+    .banner-content{
+        height: max-content;
+        width: 30rem;
+        padding: 0.5rem;
+        background: linear-gradient(235deg, rgba(140, 87, 238, 0.03) 3.9%, rgba(241, 68, 174, 0.03) 100.56%);
+        text-align: center;
+
+
+    }
+    /* ---Funny Videos Responsive */
+    .funny-videos{
+        padding: 0;
+        text-align: center;
+        width: 120%;
+    }
+    .img-container{
+        flex-direction: column;
+        align-items: center;
+    }
+    /* ---play-instantly--- */
+    .play-instantly{
+        flex-direction: column;
+        width: 120%;
+        padding: 0;
+        text-align: center;
+
+
+    }
+    .play-instantly-title{
+        text-align: center;
+       padding-left: 35%;
+    }
+    .play-instantly-description{
+        text-align: center;
+        padding-left: 35%;
+    }
+    /* Game responsive */
+    .Games{
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        }
+        footer{
+            text-align:  start;
+            align-items: self-start;
+            padding: 5rem 5.5rem;
+            width: 100%;
+    
+    
+        }
+        .footer-content{
+           display: grid;
+           grid-template-columns: repeat(3,1fr);
+           row-gap: 1rem;
+    
+        }
+        .footer-icon-container{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            row-gap: 1rem;
+          padding-left: 5rem;
+    
+    
+        }
+      
+}
+
+@media screen and (max-width:778px) and (min-width:576px){
+    
+
+    nav{
+        flex-direction: column;
+        height: min-content;
+        width: 70%;
+        box-shadow: none;
+
+        
+    
+        
+        
+    }
+    nav ul{
+        flex-direction: column;
+
+    }
+    nav li{
+        margin-top: 2rem;
+        text-align: center;
+
+    }
+    .banner{
+        flex-direction: column-reverse;
+        margin-left: 20%;
+        
         
 
         
@@ -338,10 +480,34 @@ footer{
     }
     /* Game responsive */
     .Games{
-       display:grid;
-       padding: 0;
-      justify-content: flex-start;
-
-    }
-
+        display:grid;
+        grid-template-columns: repeat(3,1fr);
+        }
+        footer{
+            text-align:  start;
+            align-items: self-start;
+            padding: 5rem 5.5rem;
+            width: 78%;
+    
+    
+        }
+        .footer-content{
+           display: grid;
+           grid-template-columns: repeat(3,1fr);
+           row-gap: 1rem;
+    
+        }
+        .footer-icon-container{
+            display: grid;
+            grid-template-columns: repeat(6,1fr);
+            row-gap: 1rem;
+            padding-left: 5rem;
+          
+    
+    
+        }
+      
 }
+    
+    
+

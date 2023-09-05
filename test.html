@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/65a0635020.js" crossorigin="anonymous"></script>
+    <style>
+        .card {
+            position: relative;
+            width: 300px; /* Adjust the width as needed */
+            overflow: hidden;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .hover-content {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        .hover-content:hover {
+            opacity: 1;
+        }
+
+        .video-icon {
+            color: white;
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .watch-now {
+            color: white;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <img src="images/Rectangle 6.png" alt="">
+        <div class="hover-content">
+            <i class="fa fa-play-circle video-icon"></i>
+            <p class="watch-now">Watch Now</p>
+        </div>
+    </div>
+</body>
+</html>
